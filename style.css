@@ -1,0 +1,35 @@
+body {
+    font-family: 'Roboto';
+    background: #333;
+}
+
+header {
+    padding: 8px 16px;
+}
+
+nav {
+    display: flex;
+    padding: 8px 0;
+}
+
+h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 12px;
+    border-bottom: 1px solid #fff;
+    padding: 2px 6px;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 2px #fff;
+    transform: scale(1.1);
+    transition: all ease-in-out 300ms;
+}
