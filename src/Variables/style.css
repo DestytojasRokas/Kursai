@@ -13,3 +13,26 @@
     margin: 12px;
     padding: 12px;
 }
+
+.f-c-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-s-c {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.su-margin {
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 24px;
+}
+
+.margin-0 {
+    margin: 0;
+}
