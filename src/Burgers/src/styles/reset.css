@@ -55,6 +55,7 @@ a {
 	text-decoration: none;
 }
 
-input[type=number] {
-	appearance: textfield;
-  }
+button {
+	border: none;
+	outline: none;
+}
