@@ -66,27 +66,32 @@ a {
 
 
 @media (min-width: 768px) {
+
     /* Linkai telpa eilute, nera tikslo rodyti mygtuko kuris atidarytu juos naujam menu */
     svg {
         display: none;
     }
 
     nav {
-       position: relative;
-       top: initial;
-       left: initial;
-       visibility: visible;
+        position: relative;
+        top: initial;
+        left: initial;
+        visibility: visible;
     }
-    
+
 
     /* Grazinam atvaizdavima eilute, kadangi elementai vel telpa */
     ul {
         flex-direction: row;
-        width:auto;
+        width: auto;
         box-shadow: none;
     }
 
     li {
         border-bottom: none;
+    }
+
+    button {
+        margin: auto;
     }
 }

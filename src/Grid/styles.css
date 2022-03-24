@@ -1,55 +1,76 @@
-body {
-    font-family: sans-serif;
-    font-size: 30px;
-}
-
 [class ^="box-"] {
     display: grid;
     place-items: center;
     border: 3px solid red;
 }
 
-
-.container {
+body {
+    font-family: sans-serif;
+    font-size: 30px;
     display: grid;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    /* patys nusistatom eiles ir stulpelius */
+    /* grid-template-rows: auto 1fr auto; */
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    grid-template-areas:
+        "header header header header"
+        "box2 box2 box2 box2"
+        "box3 box3 box3 box3"
+        "box4 box4 box4 box4"
+        "box5 box5 box5 box5"
+        "footer footer footer footer";
     grid-gap: 10px;
 }
 
-/* .container {
-    display: grid;
-    height: 100vh;
-    grid-gap: 10px;
-    grid-template-areas:
-        "a a a a   a a a a   a a a a"
-        "c c b b   b b b b   b b e e"
-        "c c d d   d d d d   d d e e"
-        "c c d d   d d d d   d d e e"
-        "c c d d   d d d d   d d e e"
-        "f f f f   f f f f   f f f f";
+@media (min-width: 768px) {
+    body {
+        grid-template-areas:
+            "header header header header"
+            "box2 box3 box3 box3"
+            "box2 box4 box4 box4"
+            "box2 box5 box5 box5"
+            "footer footer footer footer";
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        grid-template-areas:
+            "header header header header"
+            "box2 box3 box3 box5"
+            "box2 box4 box4 box5"
+            "box2 box4 box4 box5"
+            "footer footer footer footer";
+    }
 }
 
 .box-1 {
-    grid-area: a;
+    grid-area: header;
 }
 
 .box-2 {
-    grid-area: b;
+    grid-area: box2;
 }
 
 .box-3 {
-    grid-area: c;
+    grid-area: box3;
 }
 
 .box-4 {
-    grid-area: d;
+    grid-area: box4;
 }
 
 .box-5 {
-    grid-area: e;
+    grid-area: box5;
 }
 
 .box-6 {
-    grid-area: f;
+    grid-area: footer;
+}
+
+
+
+/* .box-1, .box-6 {
+    grid-column: 1 / 5;
 } */

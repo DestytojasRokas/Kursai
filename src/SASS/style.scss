@@ -1,0 +1,33 @@
+@import 'theme';
+@import 'mixin';
+
+// Extension
+%border {
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+div {
+    @include cube;
+    @extend %border;
+    // CSS kintamuju budas nenaudojant SASS
+    // background: var(--pavadinimas);
+    // SASS kintamojo variantas
+    // background: $pavadinimas;
+
+    div {
+        @include cube(75px, green);
+        @include flex-layout(flex-end, flex-end);
+
+        div {
+            @include cube(50px, yellow);
+        }
+    }
+}
+
+.flex {
+    @include cube;
+    @include flex-layout(flex-end, flex-end);
+    color: #fff;
+    font-size: 30px;
+}
